@@ -1,0 +1,256 @@
+/*****************
+**    HEADER    **
+******************/
+
+#header {
+    height: 2em;
+    line-height: 2em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+    margin: 0;
+}
+
+/*****************
+**    CONTENT   **
+******************/
+#layout {
+    position:absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow:hidden;
+}
+
+#content {
+    position: fixed;
+    overflow-y: auto;
+    top: 3em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: .7em;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration:none;
+}
+
+body {
+    -webkit-user-select: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+#loading {
+    display: none;
+    width:150px;
+    margin: 100px auto;
+    clear: both;
+}
+
+#loading img{
+    width:150px;
+    animation:spin 800ms linear infinite;
+}
+
+/*****************
+**      MENU    **
+******************/
+
+#menu-btn {
+    position: absolute;
+    left: .7em;
+    height: 2em;
+    line-height: 2em;
+    font-size: 1.6em;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    color: #fff;
+}
+
+.menu {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    min-height: 400px;
+    font-size: 1.2em !important;
+    width: 250px;
+    background: #fff;
+    z-index: 9999;
+}
+
+.menu > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu > ul li a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.menu .fa {
+    width: 60px;
+    text-align: center;
+}
+
+/*****************
+**     D-BOX    **
+******************/
+
+.detail-box {
+    border-radius: 2px;
+    margin: .7em auto;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+.detail-box-header {
+    height: 36px;
+    line-height: 36px;
+    padding-left: .6em;
+    font-weight: bold;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.detail-box-knob {
+    transition: transform 250ms;
+    float: right;
+    padding: .6em;
+}
+
+.detail-box-body {
+    background: #fff;
+    padding: .6em;
+}
+
+.detail-box-hidden .detail-box-body {
+    display: none;
+}
+
+.detail-box-hidden .detail-box-knob {
+    transform: rotate(90deg);
+}
+
+.detail-box .form-control input {
+    width: 100%;
+}
+
+/*****************
+**    TOGGLE    **
+******************/
+
+.toggle-wrapper {
+    border-radius: 2px;
+    position: relative;
+    height: 25px;
+    width: 65px;
+    overflow: hidden;
+    vertical-align: middle;
+    border: 1px solid #999;
+}
+
+.toggle-switch {
+    font-weight: normal;
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: #fff;
+    width: 150px !important;
+    margin: 0px;
+}
+
+.toggle-switch div {
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+}
+
+.toggle-option {
+    width: 55px;
+    text-shadow: none;
+}
+
+.toggle-separator {
+    width: 10px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    background: #fff;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+/*****************
+**    BUTTONS   **
+******************/
+.button-group {
+    width: 100%;
+}
+
+.primary-button {
+    float: right; 
+    margin: 0 !important;
+}
+
+/*****************
+**    COLORS    **
+******************/
+
+.primary {
+    background: #5ba945;
+    border-color: #1E670B;
+    color: #fff;
+}
+
+.inverse-primary {
+    background: #fff;
+    color: #5ba945;
+}
+
+.read-only.primary {
+    background: #93CF8D;
+    border-color: #61AB59;
+    color: #2B803E;
+}
+
+.secondary {
+    background: #9e6b49;
+    border-color: #5E3011;
+    color: #fff;
+}
+
+.inverse-secondary {
+    background: #fff;
+    color: #9e6b49;
+}
